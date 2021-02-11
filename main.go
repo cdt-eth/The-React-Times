@@ -5,52 +5,45 @@ import (
 	"net/http" // HTTP Requests (GET, POST, etc)
 	"io/ioutil" // input output
 	"encoding/xml" // unmarshall XML structure (parser)
+	"strings"
 )
 
 type SitemapIndex struct {
-	Locations []Location `xml:"sitemap"` // create slice
+	Locations []string `xml:"sitemap>loc"` // greater than means it get the next location down
 }
 
-type Location struct {
-	Loc string `xml:"loc"`
+type News struct {
+	Titles []string `xml:"url>news>title"` // data paths
+	Keywords []string `xml:"url>news>keywords"`
+	Locations []string `xml:"url>loc"`
 }
 
-// value receiver
-func(l Location) String() string {
-	return fmt.Sprintf(l.Loc) // Sprintf = format specifier and returns as string
+type NewsMap struct {
+	Keyword string // the key of the map will be the title
+	Location string
 }
 
 func main(){
+	var s SitemapIndex //assign variable
+	var n News
+	newsMap := make(map[string]NewsMap)
 	resp, _ := http.Get("https://www.washingtonpost.com/news-sitemaps/index.xml") // response
-	// resp, _ := http.Get("https://christiandavidphoto.com/sitemap_index.xml") // response
-	// resp, _ := http.Get("https://christiandavidphoto.com/post-sitemap.xml") // response
 	bytes, _ := ioutil.ReadAll(resp.Body) // GET request
-	resp.Body.Close() // closer response
+	xml.Unmarshal(bytes, &s) // parse data
 
-	var s SitemapIndex
-	xml.Unmarshal(bytes, &s)
-
-	fmt.Println(s.Locations)
+	for _, Location := range s.Locations {
+		Location = strings.TrimSpace(Location) // trim whitespace
+		resp, _ := http.Get(Location) // response
+		bytes, _ := ioutil.ReadAll(resp.Body) // GET request
+		xml.Unmarshal(bytes, &n) // unmarshal into news struct
+		
+		for index := range n.Keywords{
+			newsMap[n.Titles[index]] = NewsMap{n.Keywords[index], n.Locations[index]}
+		}
+	}
+	for index, data :=  range newsMap {
+		fmt.Println("\n\n\n", index) // index is the Title
+		fmt.Println("\n\n", data.Keyword)
+		fmt.Println("\n\n", data.Location)
+	}
 }
-
-
-
-// // w = writer & writer puts info on page
-// // ResponseWriter is a custom type
-// func indexHandler(w http.ResponseWriter, r *http.Request) { // & = memory address, *is the request
-// 	// using our writer, it will write the string
-// 	fmt.Fprintf(w, `<h1>Home Page</h1>
-// 					<p>This is...</p>
-// 					<p>...wild</p>`)
-// }
-
-// func aboutHandler(w http.ResponseWriter, r *http.Request) { // & = memory address, *is the request
-// 	// using our writer, it will write the string
-// 	fmt.Fprintf(w, "A second page! What a thought!")
-// }
-
-// func main(){
-// 	http.HandleFunc("/", indexHandler) // takes in path (homepage) "/", and our handler
-// 	http.HandleFunc("/about", aboutHandler) // takes in path (homepage) "/", and our handler
-// 	http.ListenAndServe(":8000", nil) 	// first arg is port, second is nil for now (for server)
-// }
