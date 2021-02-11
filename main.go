@@ -1,19 +1,36 @@
 package main
 
 import (
-	"fmt"
-	"net/http"
-	"io/ioutil"
+	"fmt" // "format" = print
+	"net/http" // HTTP Requests (GET, POST, etc)
+	"io/ioutil" // input output
+	"encoding/xml" // unmarshall XML structure (parser)
 )
 
+type SitemapIndex struct {
+	Locations []Location `xml:"sitemap"` // create slice
+}
+
+type Location struct {
+	Loc string `xml:"loc"`
+}
+
+// value receiver
+func(l Location) String() string {
+	return fmt.Sprintf(l.Loc) // Sprintf = format specifier and returns as string
+}
+
 func main(){
-	
 	resp, _ := http.Get("https://www.washingtonpost.com/news-sitemaps/index.xml") // response
 	// resp, _ := http.Get("https://christiandavidphoto.com/sitemap_index.xml") // response
+	// resp, _ := http.Get("https://christiandavidphoto.com/post-sitemap.xml") // response
 	bytes, _ := ioutil.ReadAll(resp.Body) // GET request
-	stringBody := string(bytes) // convert datat to string
-	fmt.Println(stringBody) // print stringified data
 	resp.Body.Close() // closer response
+
+	var s SitemapIndex
+	xml.Unmarshal(bytes, &s)
+
+	fmt.Println(s.Locations)
 }
 
 
