@@ -7,4 +7,5 @@
 - Unmarshalling response data
 - HTML Templating
 - Proper Go commenting
-- Performance boosting with Goroutines
+- Concurrency with Goroutines
+- Performance boosting with parallelism
