@@ -10,7 +10,9 @@ import (
 // ResponseWriter is a custom type
 func indexHandler(w http.ResponseWriter, r *http.Request) { // & = memory address, *is the request
 	// using our writer, it will write the string
-	fmt.Fprintf(w, "Ran! That's pretty cool.")
+	fmt.Fprintf(w, `<h1>Home Page</h1>
+					<p>This is...</p>
+					<p>...wild</p>`)
 }
 
 func aboutHandler(w http.ResponseWriter, r *http.Request) { // & = memory address, *is the request
