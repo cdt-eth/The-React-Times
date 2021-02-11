@@ -33,25 +33,10 @@ type NewsMap struct {
 // NewsAggPage ...
 type NewsAggPage struct {
 	Title string
-	News  string
+	News  map[string]NewsMap
 }
 
 func newsAggHandler(w http.ResponseWriter, r *http.Request) {
-	p := NewsAggPage{Title: "Golang News Aggregator", News: "news news news"}
-	t, _ := template.ParseFiles("basictemplating.html")
-	t.Execute(w, p)
-}
-
-func indexHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "<h1>First page!</h1>")
-}
-
-func main() {
-
-	http.HandleFunc("/", indexHandler)
-	http.HandleFunc("/agg/", newsAggHandler)
-	http.ListenAndServe(":8000", nil)
-
 	var s SitemapIndex //assign variable
 	var n News
 	newsMap := make(map[string]NewsMap)
@@ -69,9 +54,18 @@ func main() {
 			newsMap[n.Titles[index]] = NewsMap{n.Keywords[index], n.Locations[index]}
 		}
 	}
-	for index, data := range newsMap {
-		fmt.Println("\n\n\n", index) // index is the Title
-		fmt.Println("\n\n", data.Keyword)
-		fmt.Println("\n\n", data.Location)
-	}
+
+	p := NewsAggPage{Title: "Golang News Aggregator", News: newsMap}
+	t, _ := template.ParseFiles("newsaggtemplate.html")
+	t.Execute(w, p)
+}
+
+func indexHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "<h1>First page!</h1>")
+}
+
+func main() {
+	http.HandleFunc("/", indexHandler)
+	http.HandleFunc("/agg/", newsAggHandler)
+	http.ListenAndServe(":8000", nil)
 }
