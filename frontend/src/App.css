@@ -1,0 +1,39 @@
+.App {
+  text-align: center;
+}
+
+tr,
+td,
+th {
+  border: 1px red solid;
+}
+table {
+  padding: 15px;
+  width: 100%;
+}
+
+.App-header {
+  background-color: #6eb6e5;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "a b";
+  color: white;
+  display: grid;
+  grid-gap: 10px;
+  align-items: start;
+  text-align: left;
+  padding: 5px 20px;
+  align-items: center;
+}
+.App-header h1 {
+  width: 100%;
+  grid-area: a;
+}
+.App-header img {
+  width: 50%;
+  justify-self: end;
+  grid-area: b;
+}
+
+.App-link {
+  color: #61dafb;
+}
