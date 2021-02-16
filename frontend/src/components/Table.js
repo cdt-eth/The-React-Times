@@ -44,17 +44,7 @@ export class Table extends React.Component {
           <th>{this.props.col1}</th>
           <th>{this.props.col2}</th>
         </thead>
-        <tbody>
-          {this.renderTableData()}
-          {/* <tr key={uuid}>
-            <td>1</td>
-            <td>2</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>5</td>
-          </tr> */}
-        </tbody>
+        <tbody>{this.renderTableData()}</tbody>
       </table>
     );
   }
