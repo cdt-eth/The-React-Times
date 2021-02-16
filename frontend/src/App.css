@@ -37,3 +37,29 @@ table {
 .App-link {
   color: #61dafb;
 }
+.posts {
+  display: grid;
+  grid-gap: 20px;
+  list-style: none;
+  width: 85%;
+  margin: auto;
+  grid-template-areas: "a b";
+  padding-top: 50px;
+}
+.post-title {
+  grid-area: a;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  width: 85%;
+}
+.post-body {
+  grid-area: b;
+  text-align: left;
+  font-style: italic;
+  padding-bottom: 15px;
+  width: 85%;
+}
