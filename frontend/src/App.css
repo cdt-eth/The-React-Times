@@ -21,13 +21,15 @@ table {
   grid-gap: 10px;
   align-items: start;
   text-align: left;
-  padding: 5px 20px;
+  padding: 20px;
+  padding-bottom: 0;
   align-items: center;
 }
 .App-header h1 {
   width: 100%;
   grid-area: a;
 }
+
 .App-header img {
   width: 50%;
   justify-self: end;
@@ -46,6 +48,7 @@ table {
   grid-template-areas: "a b";
   padding-top: 50px;
 }
+
 .post-title {
   grid-area: a;
   text-align: left;
@@ -62,4 +65,30 @@ table {
   font-style: italic;
   padding-bottom: 15px;
   width: 85%;
+}
+svg {
+  transform: rotateX(180deg);
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  animation-name: move-left;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@media only screen and (max-width: 767px) {
+  .App-header img {
+    width: 100%;
+  }
+  .App-header h1 {
+    font-size: 1.5rem;
+  }
+  .posts {
+    grid-template-areas: none;
+    padding-inline-start: 20px !important;
+  }
+  svg {
+    height: 150px;
+  }
 }
