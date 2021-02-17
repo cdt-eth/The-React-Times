@@ -24,6 +24,7 @@ table {
   padding: 20px;
   padding-bottom: 0;
   align-items: center;
+  margin: 0;
 }
 .App-header h1 {
   width: 100%;
@@ -31,7 +32,7 @@ table {
 }
 
 .App-header img {
-  width: 50%;
+  width: 40%;
   justify-self: end;
   grid-area: b;
 }
@@ -77,6 +78,24 @@ svg {
   animation-direction: alternate;
 }
 
+.credit {
+  color: white;
+  margin: 0;
+  font-size: small;
+}
+
+.credit a {
+  color: white;
+  font-style: italic;
+}
+
+.credit a:hover {
+  color: lightgrey;
+  font-style: bold;
+  transition: color 0.4s, background-color 0.4s, border-color 0.4s;
+  /* border-bottom: 1px solid white; */
+}
+
 @media only screen and (max-width: 767px) {
   .App-header img {
     width: 100%;
@@ -90,5 +109,10 @@ svg {
   }
   svg {
     height: 150px;
+  }
+  .credit {
+    color: white;
+    margin: 0;
+    font-size: x-small;
   }
 }
