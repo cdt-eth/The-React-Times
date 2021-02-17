@@ -76,6 +76,9 @@ svg {
   animation-duration: 40s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  position: relative;
+  top: -2px;
+  z-index: -10;
 }
 
 .credit {
