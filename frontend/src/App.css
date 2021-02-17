@@ -40,7 +40,7 @@ table {
 .App-link {
   color: #61dafb;
 }
-.posts {
+.stories {
   display: grid;
   grid-gap: 20px;
   list-style: none;
@@ -50,7 +50,7 @@ table {
   padding-top: 50px;
 }
 
-.post-title {
+.story-title {
   grid-area: a;
   text-align: left;
   text-transform: uppercase;
@@ -60,7 +60,7 @@ table {
   padding-bottom: 5px;
   width: 85%;
 }
-.post-body {
+.story-body {
   grid-area: b;
   text-align: left;
   font-style: italic;
@@ -105,7 +105,7 @@ svg {
   .App-header h1 {
     font-size: 1.5rem;
   }
-  .posts {
+  .stories {
     grid-template-areas: none;
     padding-inline-start: 20px !important;
   }
