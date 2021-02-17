@@ -1,2 +1,7 @@
 **/node_modules
 
+./netlify
+
+.DS_Store
+
+./frontend/.DS_Store
