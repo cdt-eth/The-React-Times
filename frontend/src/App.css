@@ -84,6 +84,7 @@ svg {
   color: white;
   margin: 0;
   font-size: small;
+  padding-bottom: 10px;
 }
 
 .credit a {
@@ -96,6 +97,14 @@ svg {
   font-style: bold;
   transition: color 0.4s, background-color 0.4s, border-color 0.4s;
   /* border-bottom: 1px solid white; */
+}
+.loading {
+  width: 335px;
+  margin: auto;
+}
+
+.loading svg {
+  height: 150px;
 }
 
 @media only screen and (max-width: 767px) {
