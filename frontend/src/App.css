@@ -11,6 +11,35 @@ table {
   padding: 15px;
   width: 100%;
 }
+@font-face {
+  font-family: "cooper-black-std";
+  src: url("https://use.typekit.net/af/9044bf/000000000000000000013102/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/9044bf/000000000000000000013102/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/9044bf/000000000000000000013102/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")
+      format("opentype");
+  font-display: auto;
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "p22-mackinac-pro";
+  src: url("https://use.typekit.net/af/c88cc7/00000000000000007735b3d6/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i8&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/c88cc7/00000000000000007735b3d6/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i8&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/c88cc7/00000000000000007735b3d6/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i8&v=3")
+      format("opentype");
+  font-display: auto;
+  font-style: italic;
+  font-weight: 800;
+}
+
+.siteTitle {
+  font-family: cooper-black-std, serif;
+}
 
 .App-header {
   background-color: #6eb6e5;
@@ -40,6 +69,20 @@ table {
 .App-link {
   color: #61dafb;
 }
+
+.story {
+  border-radius: 5px;
+  box-shadow: 0 30px 60px -12px rgb(50 50 93 / 25%),
+    0 18px 36px -18px rgb(0 0 0 / 30%), 0 -12px 36px -8px rgb(0 0 0 / 3%);
+  transition: 0.2s ease-out;
+  padding: 30px;
+}
+
+.story:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 35px rgb(50 50 93 / 10%), 0 8px 15px rgb(0 0 0 / 7%);
+}
+
 .stories {
   display: grid;
   grid-gap: 20px;
@@ -67,6 +110,7 @@ table {
   padding-bottom: 15px;
   width: 85%;
 }
+
 svg {
   transform: rotateX(180deg);
   width: 100%;
