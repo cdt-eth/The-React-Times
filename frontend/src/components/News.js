@@ -10,6 +10,7 @@ export default function News() {
     fetch(
       "https://api.nytimes.com/svc/topstories/v2/technology.json?api-key=4fzCTy6buRI5xtOkZzqo4FfEkzUVAJdr"
     )
+      // fetch(`https://api.nytimes.com/svc/topstories/v2/${section}.json`)
       .then((res) => res.json())
       .then((data) => {
         setTimeout(() => setStory(data), 1500);

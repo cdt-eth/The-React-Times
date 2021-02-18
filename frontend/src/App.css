@@ -1,4 +1,5 @@
 @import url("https://p.typekit.net/p.css?s=1&k=sjh2xka&ht=tk&f=6839.28208.39494.39495.39500.39501.39504.39505.39508.39509&a=2376974&app=typekit&e=css");
+@import url("https://db.onlinewebfonts.com/c/d571b52b60b5617399ce8eab62bf3eb3?family=Engravers%27+Old+English+BT");
 
 .App {
   text-align: center;
@@ -9,6 +10,7 @@ td,
 th {
   border: 1px red solid;
 }
+
 table {
   padding: 15px;
   width: 100%;
@@ -41,6 +43,8 @@ table {
 
 .siteTitle {
   font-family: cooper-black-std, serif;
+  font-family: "Engravers' Old English BT";
+  letter-spacing: 3px;
 }
 
 .App-header {
@@ -204,6 +208,34 @@ svg {
   height: 150px;
 }
 
+.masthead {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  text-transform: uppercase;
+  font-family: neue-haas-grotesk-text, sans-serif;
+  font-weight: 500;
+}
+
+.masthead a {
+  text-decoration: none;
+  color: black;
+  border-bottom: 3px solid transparent;
+  font-size: small;
+}
+
+.masthead span:hover {
+  font-weight: bold;
+  border-bottom: 3px solid #193152;
+  width: max-content;
+  margin: auto;
+  color: #193152;
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 767px) {
   .stories {
     grid-gap: 100px;
@@ -230,6 +262,7 @@ svg {
     grid-area: "b";
     text-align: center;
     margin-top: 0px;
+    padding-bottom: 7px;
   }
   .stories {
     grid-template-areas: none;
@@ -265,5 +298,13 @@ svg {
   .story-link {
     width: 30%;
     margin: auto;
+  }
+  .masthead {
+    grid-template-columns: repeat(5, 1fr);
+    font-size: small;
+    width: 80%;
+  }
+  .masthead a {
+    padding-bottom: 10px;
   }
 }
