@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 
 const Story = (props) => {
   return (
@@ -7,15 +8,7 @@ const Story = (props) => {
       <img className="story-img" src={props.img} alt={props.alt} />
       <span className="story-content">
         <li className="story-body">{props.abstract}</li>
-        <a
-          className="story-link"
-          href={props.link}
-          rel="noreferrer"
-          target="_blank"
-          type="button"
-        >
-          Read →
-        </a>
+        <Button link={props.link} />
       </span>
     </div>
   );
