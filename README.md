@@ -1,7 +1,6 @@
-# Go News Aggregator
+# React News
 
-### Program that uses Go to perform GET requests to The Washington Post's sitemap xml URLs and aggregates the news from it.
-#### <em>(Currnetly the React Frontend & Go Backend are not connected)</em>
+### Read stories from the New York Times using Top Stories Technology API
 
 <br />
 
