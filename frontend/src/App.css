@@ -158,7 +158,6 @@ table {
 
 .story-content {
   display: grid;
-  /* grid-template-columns: 1fr 1fr; */
   grid-template-areas: "b a";
 }
 
@@ -234,7 +233,7 @@ svg {
   }
   .stories {
     grid-template-areas: none;
-    padding-inline-start: 20px !important;
+    padding-inline-start: 0px !important;
   }
   svg {
     height: 150px;
@@ -246,5 +245,25 @@ svg {
     font-size: x-small;
     grid-area: "c";
     text-align: center;
+  }
+  .story-title {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .story-content {
+    display: grid;
+    grid-template-areas:
+      "b"
+      "a";
+  }
+
+  .story-body {
+    width: 100%;
+  }
+
+  .story-link {
+    width: 30%;
+    margin: auto;
   }
 }
