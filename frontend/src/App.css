@@ -217,22 +217,23 @@ svg {
   margin: auto;
   text-transform: uppercase;
   font-family: neue-haas-grotesk-text, sans-serif;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .masthead a {
   text-decoration: none;
   color: black;
-  border-bottom: 3px solid transparent;
+  /* border-bottom: 3px solid transparent; */
   font-size: small;
 }
 
 .masthead span:hover {
   font-weight: bold;
-  border-bottom: 3px solid #193152;
+  /* border-bottom: 3px solid #193152; */
   width: max-content;
   margin: auto;
   color: #193152;
+  font-weight: 800;
   cursor: pointer;
 }
 
@@ -302,9 +303,10 @@ svg {
   .masthead {
     grid-template-columns: repeat(5, 1fr);
     font-size: small;
-    width: 80%;
+    width: 90%;
   }
   .masthead a {
     padding-bottom: 10px;
+    font-size: x-small;
   }
 }
