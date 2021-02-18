@@ -10,12 +10,13 @@ export default function News() {
 
   useEffect(() => {
     fetch(
-      "http://api.mediastack.com/v1/news?languages=en&access_key=09b9953aea9691c46007f0daa2be4fa4"
+      "https://api.nytimes.com/svc/topstories/v2/technology.json?api-key=4fzCTy6buRI5xtOkZzqo4FfEkzUVAJdr"
     )
       .then((res) => res.json())
-      .then((result) => {
-        setTimeout(() => setStory(result), 2000);
-        console.log("Success ", result);
+      .then((data) => {
+        setTimeout(() => setStory(data), 1500);
+        console.log("Success ", data);
+        console.log("Success ", data.results[0].title);
       })
       .catch((error) => {
         console.log("Error", error);
@@ -30,10 +31,9 @@ export default function News() {
   } else {
     return (
       <>
-        {/* <LoadingBar type={"cylon"} color={"#6eb6e5"} /> */}
         <ul className="stories">
-          {stories.data.map((story) => {
-            return <Story title={story.title} category={story.category} />;
+          {stories.results.map((story) => {
+            return <Story title={story.title} abstract={story.abstract} />;
           })}
         </ul>
       </>

@@ -5,3 +5,7 @@
 .DS_Store
 
 ./frontend/.DS_Store
+
+./build/
+
+./frontend/build/
