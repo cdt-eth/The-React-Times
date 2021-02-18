@@ -9,3 +9,20 @@
 ./build/
 
 ./frontend/build/
+
+../build
+
+../frontend/build/*
+
+./frontend/build/
+./frontend/build/static/
+./frontend/build/asset-manifest.json
+
+../frontend/build/
+../frontend/build/static/
+../frontend/build/asset-manifest.json
+
+./frontend/build/*
+frontend/build/static/*
+frontend/build/*
+frontend/build

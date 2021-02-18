@@ -11,9 +11,9 @@ export const SVG = () => {
         xmlns="http://www.w3.org/2000/svg"
       >
         <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="100%" stopColor="#6eb6e5" />
-          <stop offset="100%" stopColor="#6eb6e5" />
-          <stop offset="100%" stopColor="#6eb6e5" />
+          <stop offset="100%" stopColor="#193252" />
+          <stop offset="100%" stopColor="#193252" />
+          <stop offset="100%" stopColor="#193252" />
         </linearGradient>
         <path
           fill="url(#grad1)"

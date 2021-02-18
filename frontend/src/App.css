@@ -42,15 +42,15 @@ table {
 }
 
 .App-header {
-  background-color: #6eb6e5;
+  background-color: #193252;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "a b";
-  color: white;
+  color: #00dcff;
   display: grid;
-  grid-gap: 10px;
+  /* grid-gap: 10px; */
   align-items: start;
   text-align: left;
-  padding: 20px;
+  padding: 20px 60px;
   padding-bottom: 0;
   align-items: center;
   margin: 0;
@@ -58,16 +58,20 @@ table {
 .App-header h1 {
   width: 100%;
   grid-area: a;
+  font-size: 3rem;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 .App-header img {
-  width: 40%;
+  width: 15%;
   justify-self: end;
   grid-area: b;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #193252;
+  /* color: #61dafb; */
 }
 
 .story {
@@ -125,15 +129,18 @@ svg {
 }
 
 .credit {
-  color: white;
+  color: #00dcff;
   margin: 0;
   font-size: small;
   padding-bottom: 10px;
+  font-weight: bold;
 }
 
 .credit a {
-  color: white;
+  color: #00dcff;
+  font-weight: bold;
   font-style: italic;
+  font-weight: bold;
 }
 
 .credit a:hover {
@@ -152,11 +159,24 @@ svg {
 }
 
 @media only screen and (max-width: 767px) {
+  .App-header {
+    grid-template-areas:
+      "b"
+      "a"
+      "c";
+    grid-template-columns: 1fr;
+  }
   .App-header img {
-    width: 100%;
+    width: 25%;
+    grid-area: "a";
+    margin: auto;
+    padding-top: 20px;
   }
   .App-header h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    grid-area: "b";
+    text-align: center;
+    margin-top: 0px;
   }
   .stories {
     grid-template-areas: none;
@@ -166,8 +186,11 @@ svg {
     height: 150px;
   }
   .credit {
-    color: white;
+    color: #00dcff;
+    font-weight: bold;
     margin: 0;
     font-size: x-small;
+    grid-area: "c";
+    text-align: center;
   }
 }
