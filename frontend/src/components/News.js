@@ -8,11 +8,17 @@ export default function News() {
   const [stories, setStory] = useState(null);
 
   useEffect(() => {
+    const getCurrentPage = () => {
+      const url = new URL(window.location.href);
+      const page = url.pathname.split("/").pop();
+      return page ? page : "home";
+    };
     // fetch(
-    //   "https://api.nytimes.com/svc/topstories/v2/technology.json?api-key=4fzCTy6buRI5xtOkZzqo4FfEkzUVAJdr"
-    // );
+    //   "https://api.nytimes.com/svc/topstories/v2/home.json?api-key=4fzCTy6buRI5xtOkZzqo4FfEkzUVAJdr"
+    //
+    const section = getCurrentPage();
     fetch(
-      "https://api.nytimes.com/svc/topstories/v2/home.json?api-key=4fzCTy6buRI5xtOkZzqo4FfEkzUVAJdr"
+      `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=4fzCTy6buRI5xtOkZzqo4FfEkzUVAJdr`
     )
       .then((res) => res.json())
       .then((data) => {

@@ -4,8 +4,8 @@ import uuid from "uuid";
 var sections = [
   "arts",
   "business",
-  "fashion",
   "health",
+  "home",
   "movies",
   "opinion",
   "politics",
