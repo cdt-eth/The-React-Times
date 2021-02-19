@@ -1,5 +1,6 @@
 @import url("https://p.typekit.net/p.css?s=1&k=sjh2xka&ht=tk&f=6839.28208.39494.39495.39500.39501.39504.39505.39508.39509&a=2376974&app=typekit&e=css");
-@import url("https://db.onlinewebfonts.com/c/d571b52b60b5617399ce8eab62bf3eb3?family=Engravers%27+Old+English+BT");
+@import url("https://fonts.cdnfonts.com/css/old-london");
+@import url("https://fonts.cdnfonts.com/css/diploma");
 
 .App {
   text-align: center;
@@ -15,6 +16,22 @@ table {
   padding: 15px;
   width: 100%;
 }
+
+@font-face {
+  font-family: "Engravers' Old English BT";
+  src: url("https://db.onlinewebfonts.com/t/d571b52b60b5617399ce8eab62bf3eb3.eot");
+  src: url("https://db.onlinewebfonts.com/t/d571b52b60b5617399ce8eab62bf3eb3.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/d571b52b60b5617399ce8eab62bf3eb3.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/d571b52b60b5617399ce8eab62bf3eb3.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/d571b52b60b5617399ce8eab62bf3eb3.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/d571b52b60b5617399ce8eab62bf3eb3.svg#Engravers' Old English BT")
+      format("svg");
+}
+
 @font-face {
   font-family: "cooper-black-std";
   src: url("https://use.typekit.net/af/9044bf/000000000000000000013102/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")
@@ -43,7 +60,8 @@ table {
 
 .siteTitle {
   font-family: cooper-black-std, serif;
-  font-family: "Engravers' Old English BT";
+  font-family: "Old London", sans-serif;
+  font-family: "Diploma", sans-serif;
   letter-spacing: 3px;
 }
 
