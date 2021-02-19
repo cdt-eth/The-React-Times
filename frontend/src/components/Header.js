@@ -16,7 +16,7 @@ export default class Header extends React.Component {
         <p className="credit">
           work in progress:{" "}
           <a
-            href="https://twitter.com/imcdt"
+            href="https://cdt.works/"
             target="_blank"
             rel="noopener noreferrer"
           >
