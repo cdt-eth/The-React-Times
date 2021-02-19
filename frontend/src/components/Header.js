@@ -15,14 +15,18 @@ export default class Header extends React.Component {
 
         <p className="credit">
           work in progress:{" "}
-          <a href="https://twitter.com/imcdt" target="_blank" rel="noreferrer">
+          <a
+            href="https://twitter.com/imcdt"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             me
           </a>{" "}
           |{" "}
           <a
             href="https://github.com/christiandavidturner/Go-News-Aggregator"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             repo
           </a>

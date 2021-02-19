@@ -5,7 +5,7 @@ const Button = (props) => {
     <a
       className="story-link"
       href={props.link}
-      rel="noreferrer"
+      rel="noopener noreferrer"
       target="_blank"
       type="button"
     >
