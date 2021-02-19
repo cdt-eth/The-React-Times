@@ -32,7 +32,7 @@ export const SVG = () => {
             repeatCount="indefinite"
             fill="url(#grad1)"
             attributeName="d"
-            dur="50s"
+            dur="10s"
             attributeType="XML"
             values="
             M0 77 
