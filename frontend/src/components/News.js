@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from "react";
 import Story from "./Story";
 import LoadingBar from "./LoadingBar";
+import Spacer from "./Spacer";
 
 export default function News() {
   const [error, setError] = useState(null);
   const [stories, setStory] = useState(null);
 
   useEffect(() => {
+    // fetch(
+    //   "https://api.nytimes.com/svc/topstories/v2/technology.json?api-key=4fzCTy6buRI5xtOkZzqo4FfEkzUVAJdr"
+    // );
     fetch(
-      "https://api.nytimes.com/svc/topstories/v2/technology.json?api-key=4fzCTy6buRI5xtOkZzqo4FfEkzUVAJdr"
+      "https://api.nytimes.com/svc/topstories/v2/home.json?api-key=4fzCTy6buRI5xtOkZzqo4FfEkzUVAJdr"
     )
-      // fetch(`https://api.nytimes.com/svc/topstories/v2/${section}.json`)
       .then((res) => res.json())
       .then((data) => {
         setTimeout(() => setStory(data), 1500);
@@ -44,6 +47,7 @@ export default function News() {
             );
           })}
         </ul>
+        <Spacer height={100} />
       </>
     );
   }

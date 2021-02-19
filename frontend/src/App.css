@@ -119,6 +119,7 @@ table {
   margin: auto;
   grid-template-areas: "a b";
   padding-top: 50px;
+  padding-inline-start: 0;
 }
 
 .story-title {
