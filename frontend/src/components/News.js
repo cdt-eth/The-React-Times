@@ -30,6 +30,7 @@ export default function News() {
       })
       .catch((error) => {
         console.log("Error", error);
+        setError(error);
       });
   }, []);
 
@@ -41,9 +42,10 @@ export default function News() {
     return (
       <>
         <ul className="stories">
-          {stories.results.map((story) => {
+          {stories.results.map((story, idx) => {
             return (
               <Story
+                key={idx}
                 title={story.title}
                 abstract={story.abstract}
                 img={story.multimedia[0].url}

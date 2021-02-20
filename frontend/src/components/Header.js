@@ -5,11 +5,10 @@ export default class Header extends React.Component {
     return (
       <header className="App-header">
         <h1 className="siteTitle">{this.props.title}</h1>
-        {/* <img src={logo} alt="golang-gopher" /> */}
         <img
           src="https://media1.giphy.com/media/eNAsjO55tPbgaor7ma/giphy.gif"
-          frameborder="0"
-          allowfullscreen=""
+          frameBorder="0"
+          allowFullScreen=""
           alt="react-logo-gif"
         />
 
@@ -24,7 +23,7 @@ export default class Header extends React.Component {
           </a>{" "}
           |{" "}
           <a
-            href="https://github.com/christiandavidturner/Go-News-Aggregator"
+            href="https://github.com/christiandavidturner/React-News"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -1,5 +1,5 @@
 import React from "react";
-import uuid from "uuid";
+// import uuid from "uuid";
 
 var sections = [
   "arts",
@@ -17,9 +17,9 @@ var sections = [
 export default function Masthead() {
   return (
     <div className="masthead">
-      {sections.map((section) => {
+      {sections.map((section, idx) => {
         return (
-          <a href={section} key={uuid}>
+          <a href={section} key={idx}>
             <span>{section}</span>
           </a>
         );
