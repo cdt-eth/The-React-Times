@@ -210,6 +210,8 @@ table {
   display: inline-block;
   position: relative;
   transition: 0.5s;
+  margin-left: 15px;
+  float: left;
 }
 
 /*
