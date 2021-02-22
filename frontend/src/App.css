@@ -206,20 +206,18 @@ table {
   cursor: pointer;
   /* margin: 36px; */
   box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
-}
-
-.story-link {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
+/*
 .story-link:after {
   content: "→";
   position: absolute;
   opacity: 0;
-  /* top: 14px; */
+  // top: 14px;
   right: -20px;
   transition: 0.3s;
 }
@@ -233,6 +231,7 @@ table {
   opacity: 1;
   right: 28px;
 }
+*/
 /* 44444444444353453425252352345 */
 
 .story-content {
@@ -277,6 +276,7 @@ svg {
   transition: color 0.4s, background-color 0.4s, border-color 0.4s;
   /* border-bottom: 1px solid white; */
 }
+
 .loading {
   width: 335px;
   margin: auto;
@@ -316,6 +316,24 @@ svg {
 }
 
 @media only screen and (min-width: 767px) {
+  .story-link:after {
+    content: "→";
+    position: absolute;
+    opacity: 0;
+    right: -20px;
+    transition: 0.3s;
+  }
+
+  .story-link:hover {
+    padding-right: 20px;
+    padding-left: 4px;
+  }
+
+  .story-link:hover:after {
+    opacity: 1;
+    right: 28px;
+  }
+
   .stories {
     /* grid-gap: 100px;
     width: 95%; */
@@ -348,6 +366,7 @@ svg {
   .stories {
     grid-template-areas: none;
     padding-inline-start: 0px !important;
+    width: 90%;
   }
   svg {
     height: 150px;
@@ -365,6 +384,10 @@ svg {
     width: 100%;
   }
 
+  .story {
+    padding: 20px 15px;
+  }
+
   .story-content {
     display: grid;
     grid-template-areas:
@@ -374,11 +397,18 @@ svg {
 
   .story-body {
     width: 100%;
+    max-width: 90%;
+    font-size: small;
   }
 
+  .story-img {
+    height: 100%;
+  }
   .story-link {
     width: 30%;
-    margin: auto;
+    /* margin: auto; */
+    float: left;
+    margin-left: 15px;
   }
   .masthead {
     grid-template-columns: repeat(5, 1fr);
