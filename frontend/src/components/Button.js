@@ -9,7 +9,7 @@ const Button = (props) => {
       target="_blank"
       type="button"
     >
-      Read →
+      Read
     </a>
   );
 };
