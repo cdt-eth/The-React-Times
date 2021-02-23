@@ -87,7 +87,10 @@ table {
   margin-bottom: 0px;
   margin-top: 0px;
 }
-
+.App-header h1 a {
+  color: #00dcff;
+  text-decoration: none;
+}
 .App-header img {
   width: 15%;
   justify-self: end;
@@ -352,6 +355,9 @@ svg {
       "c";
     grid-template-columns: 1fr;
   }
+  /* .App-header a {
+    display: none;
+  } */
   .App-header img {
     width: 25%;
     grid-area: "a";
@@ -365,6 +371,7 @@ svg {
     margin-top: 0px;
     padding-bottom: 7px;
   }
+
   .stories {
     grid-template-areas: none;
     padding-inline-start: 0px !important;

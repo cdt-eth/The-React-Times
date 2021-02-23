@@ -1,8 +1,6 @@
 import React from "react";
 import Header from "./components/Header";
-import { SVG } from "./components/SVG";
 import News from "./components/News";
-import Masthead from "./components/Masthead";
 import "./App.css";
 
 class App extends React.Component {
@@ -10,8 +8,6 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header title={"The React Times"} />
-        <SVG />
-        <Masthead />
         <News />
       </div>
     );
