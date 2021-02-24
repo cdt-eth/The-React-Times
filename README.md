@@ -1,39 +1,38 @@
-# React News
+# The React Times
 
 ### Read stories from the New York Times using Top Stories Technology API
+
+![home](https://user-images.githubusercontent.com/26611339/109046041-4f2c1280-76a2-11eb-85fb-20be1e8502e4.gif)
 
 <br />
 
 #### To run the frontend (it's a basic create-react-app):
-1. `gh repo clone christiandavidturner/Go-News-Aggregator`
-2. `cd Go-News-Aggregator/frontend/`
+1. `gh repo clone christiandavidturner/The-React-Times`
+2. `cd The-React-Times/frontend/`
 3. `npm i`
 4. `yarn start`
-5. open browser window and type in `http://localhost:8000/agg`
-
-#### To run the backend (assuming you cloned the repo from instructions above):
-1. `cd Go-News-Aggregator/backend/`
-2. run `go run main.go`
-3. open browser window and type in `http://localhost:3000`
+5. open browser window and type in `http://localhost:3000`
 
 <br/>
 
-## What I learned:
-- HTTP Requests in Go
-- Unmarshalling response data
-- HTML Templating
-- Proper Go commenting
-- Concurrency with Goroutines
-- Performance boosting with parallelism
+### Call-out Features (Design & Function):
+- Nested React components (children & grandchildren)
+- Data fetching from API with auth key
+- Responsive Design
+- CSS Grid
+- Animated SVG wave element
+- GIF logo
+- setTimeout() added to showcase loading animation
+- Navigation that fetches new data based on section 
+- Deployed on Netlify
+- Desktop only: button micro-interaction on-hover
 
-
-## Adding concurrency:
-### Before: 116,621ms
-<img width="1440" alt="3" src="https://user-images.githubusercontent.com/26611339/107683373-7a107280-6c6f-11eb-9841-aa9430f1203c.png">
-
-<br/>
-
-### After: 12,060ms (+89% increase)
-<img width="1439" alt="4" src="https://user-images.githubusercontent.com/26611339/107683578-b9d75a00-6c6f-11eb-8333-7f0fc1c5cfbe.png">
-
-
+### Components:
+- **Header** - Parent component to `Masthead` and `SVG`. There 3 make up the principal navigation component <br/>
+   └─ **Masthead** - List of sections<br/>
+   └─ **SVG** - Animated SVG wave<br/>
+- **News** - Fetch data from New York Times API and return `Stories` <br/>
+   └─ **Story** - Child component of `News` for individual story component
+- **LoadingBar** - Loading animation taken from [react-loading](https://www.npmjs.com/package/react-loading)
+- **Button** - Composable button
+- **Spacer** - Flexible spacer by height
