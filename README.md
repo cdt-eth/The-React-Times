@@ -35,6 +35,7 @@
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ **Button** - Composable button
 - **LoadingBar** - Loading animation taken from [react-loading](https://www.npmjs.com/package/react-loading)
 - **Spacer** - Flexible spacer by height
+- **Footer** - Copyright year, email, and website
 
 ### Challenges:
 
