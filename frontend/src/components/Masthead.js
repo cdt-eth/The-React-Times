@@ -3,8 +3,8 @@ import React from "react";
 var sections = [
   "arts",
   "business",
+  "fashion",
   "health",
-  "home",
   "movies",
   "opinion",
   "politics",
@@ -21,7 +21,8 @@ export default function Masthead() {
       {sections.map((section, idx) => {
         return (
           <a
-            href={"#" + section}
+            // href={"#" + section}
+            href={section}
             key={idx}
             onClick={() => setCurSection(section)}
             className={section === cur_section ? "active" : ""}

@@ -48,8 +48,22 @@ export default function News() {
                 key={idx}
                 title={story.title}
                 abstract={story.abstract}
-                img={story.multimedia[0].url}
-                alt={story.multimedia[0].caption}
+                img={
+                  story &&
+                  story.multimedia &&
+                  story.multimedia[0] &&
+                  story.multimedia[0].url
+                    ? story.multimedia[0].url
+                    : "https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png"
+                }
+                alt={
+                  story &&
+                  story.multimedia &&
+                  story.multimedia[0] &&
+                  story.multimedia[0].caption
+                    ? story.multimedia[0].caption
+                    : null
+                }
                 link={story.url}
               />
             );
