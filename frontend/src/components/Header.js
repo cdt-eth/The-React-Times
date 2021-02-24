@@ -30,7 +30,7 @@ export default class Header extends React.Component {
             </a>{" "}
             |{" "}
             <a
-              href="https://github.com/christiandavidturner/React-News"
+              href="https://github.com/christiandavidturner/The-React-Times"
               target="_blank"
               rel="noopener noreferrer"
             >
