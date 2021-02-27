@@ -1,4 +1,11 @@
-import React from "react";
+import React, { FC, ReactElement } from "react";
+
+interface MastheadProps {
+  section?: String;
+  idx?: Number;
+  cur_section?: String;
+  setCurSection?: () => void;
+};
 
 var sections = [
   "arts",
@@ -13,7 +20,7 @@ var sections = [
   "technology",
 ];
 
-export default function Masthead() {
+const Masthead: FC<MastheadProps> = ({section, idx}): ReactElement => {
   const [cur_section, setCurSection] = React.useState("");
 
   return (
@@ -33,4 +40,6 @@ export default function Masthead() {
       })}
     </div>
   );
-}
+};
+
+export default Masthead;

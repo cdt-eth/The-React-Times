@@ -1,10 +1,14 @@
-import React from "react";
+import React, { FC, ReactElement } from 'react';
 
-const Button = (props) => {
+type ButtonProps = {
+  link? : string
+}
+
+const Button: FC<ButtonProps> = ({link}): ReactElement => {
   return (
     <a
       className="story-link"
-      href={props.link}
+      href={link}
       rel="noopener noreferrer"
       target="_blank"
       type="button"

@@ -1,11 +1,7 @@
 import React from "react";
-// @ts-ignore
 import Header from "./components/Header";
-// @ts-ignore
 import News from "./components/News";
-// @ts-ignore
 import Footer from "./components/Footer";
-// @ts-ignore
 import Spacer from "./components/Spacer";
 import "./App.css";
 
