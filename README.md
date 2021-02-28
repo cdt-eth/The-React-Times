@@ -1,6 +1,6 @@
 # The React Times
 
-### Read stories from the New York Times using Top Stories Technology API
+### Read stories from the New York Times fetched from their Top Stories API
 
 ![home](https://user-images.githubusercontent.com/26611339/109046041-4f2c1280-76a2-11eb-85fb-20be1e8502e4.gif)
 
