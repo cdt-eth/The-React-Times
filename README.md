@@ -47,13 +47,14 @@
 - optional chaining when fetched data is `null` (conditional rendering)
 - string interpolation in fetch request to change section -> `${section}.json`
 - implementing new `useState` and `useEffect` hooks
+- Refactor to use Typescript
 
 ### Future Plans:
 
-- Add Typescript
+~~- Add Typescript~~
 - Add Tailwind CSS
 - Unit Testing with Jest
 - End-to-end testing with Cypress
-- clean up CSS file
+~~- clean up CSS file~~
 - Refactor `Masthead` component to use React Router
   - eliminate page reload when clicking new section (on-fetching new data)
