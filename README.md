@@ -54,7 +54,7 @@
 ~~- Add Typescript~~
 - [Add Redux](https://redux-toolkit.js.org/introduction/getting-started#an-existing-app)
 - [Add Tailwind CSS](https://tailwindcss.com/docs/guides/create-react-app)
-- Unit Testing with Jest
+~~- Unit Testing with Jest~~
 - End-to-end testing with Cypress
 ~~- clean up CSS file~~
 - Refactor `Masthead` component to use [React Router](https://reactrouter.com/web/guides/quick-start)
