@@ -51,10 +51,9 @@
 
 ### Future Plans:
 
-~~- Add Typescript~~
-~~- clean up CSS file~~
-~~- Unit Testing with Jest~~
-
+~~- Add Typescript~~ <br/>
+~~- clean up CSS file~~ <br/>
+~~- Unit Testing with Jest~~ <br/>
 - [Add Redux](https://redux-toolkit.js.org/introduction/getting-started#an-existing-app)
 - [Add Tailwind CSS](https://tailwindcss.com/docs/guides/create-react-app)
 - End-to-end testing with Cypress
